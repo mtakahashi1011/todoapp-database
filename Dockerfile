@@ -13,3 +13,5 @@ RUN apt install -y tzdata
 WORKDIR /workspace/test-mysql
 
 COPY . .
+
+RUN /usr/bin/mysqld_safe & sleep 10s && cat setup.sql | mysql
