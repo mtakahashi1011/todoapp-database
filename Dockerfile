@@ -1,4 +1,4 @@
-FROM amd64v8/mysql:8.0
+FROM --platform=linux/amd64　mysql:8.0
 
 RUN apt update 
 
@@ -17,6 +17,9 @@ ENV TZ Asia/Tokyo
 RUN apt install -y tzdata
 
 WORKDIR /workspace/test-mysql
+
+ENV MYSQL_DATABASE todo_app
+ENV MYSQL_ROOT_PASSWORD password
 
 COPY . .
 
