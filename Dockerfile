@@ -1,6 +1,6 @@
 FROM --platform=linux/amd64 mysql:8.0-debian
 
-RUN apt update && apt upgrade
+RUN apt update 
 
 RUN apt install -y vim 
 
