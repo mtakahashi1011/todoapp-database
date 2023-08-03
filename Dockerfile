@@ -20,4 +20,4 @@ WORKDIR /workspace/test-mysql
 
 COPY . .
 
-// RUN /usr/bin/mysqld_safe & sleep 10s && cat setup.sql | mysql
+# RUN /usr/bin/mysqld_safe & sleep 10s && cat setup.sql | mysql
