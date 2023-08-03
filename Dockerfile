@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 mysql:8.0-debian
+FROM amd64v8/mysql:8.0
 
 RUN apt update 
 
