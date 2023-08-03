@@ -6,7 +6,7 @@ RUN apt install -y vim
 
 RUN apt install -y git 
 
-RUN apt install locales-all
+RUN apt install -y locales-all
 
 ENV LANG ja_JP.UTF-8
 ENV LANGUAGE ja_JP:ja
