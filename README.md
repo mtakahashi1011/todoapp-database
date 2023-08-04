@@ -17,7 +17,7 @@ apt update
 apt install -y vim
 apt install -y git
 ```
-また，環境変数を設定することでMySQLのユーザーやデータベースを作成したりパスワードを設定したりできる
+また，環境変数を設定することでMySQLのユーザーやデータベースを作成したり，パスワードを設定したりできる
 ```
 ENV MYSQL_ROOT_PASSWORD password
 ENV MYSQL_DATABASE todo_app
@@ -29,12 +29,9 @@ ENV MYSQL_PASSWORD password
 |変数名|説明|
 |---|---|
 |MYSQL_ROOT_PASSWORD| この変数の設定は**必須**です!名前の通りROOTユーザのパスワードになります。 |
-|MYSQL_DATABASE| 起動時に作成されるDBの名前です。|
-|MYSQL_USER| 起動時に新しいユーザを作成します。ここで作成したユーザには[MYSQL_DATABASE] で指定したDBへの**GRANT ALL** 権限が付与されます。|
-|MYSQL_PASSWORD|上記の[MYSQL_USER] で作成したユーザのパスワードです。<br>ユーザを作成する場合にはこちらが必須になります。|
-|MYSQL_ALLOW_EMPTY_PASSWORD|[MYSQL_ROOT_PASSWORD] に空を設定できる用にするフラグです。<br>`"yes"`を設定することで空を設定することが可能になります。ただし、よくわからないならおすすめしない設定です。|
-|MYSQL_RANDOM_ROOT_PASSWORD|`"yes"`を設定することでランダムなパスワードが発行されます。<br>起動時の標準出力へ`GENERATED ROOT PASSWORD:  xxxxxxx`と出力されますが、正直ローカル開発用ならこのオプションを使うことはないと思います。|
-|MYSQL_ONETIME_PASSWORD|rootユーザのパスワード一度で期限切れにしてくれるらしいです。試してみたのですが、何故かうまく行かなかったので動作確認はできていません・・・ |
+|MYSQL_DATABASE| 起動時に作成されるDBの名前|
+|MYSQL_USER| 起動時に作成される新しいユーザー<br>ここで作成したユーザには[MYSQL_DATABASE] で指定したDBへの**GRANT ALL** 権限が付与される|
+|MYSQL_PASSWORD|上記の[MYSQL_USER] で作成されるユーザーのパスワード<br>ユーザーを作成する場合にはこれが必須|
 
 更に，以下のようにMySQLの設定ファイル`my.cnf'をコピーすることでデフォルトの認証方式を設定できる
 ```
@@ -46,9 +43,13 @@ COPY ./db/conf.d/my.cnf /etc/mysql/my.cnf
 ```
 docker container run --name (コンテナ名) -d -p 3306:3306 (イメージ名)
 ```
+コンテナの初回起動時に上の環境変数で指定されたユーザーとデータベースが作成される
 
+また，`/docker-entrypoint-initdb.d`ディレクトリ配下にある拡張子`.sh`と`.sql`のファイルがアルファベット順に実行される
 
-## 3.コンテナへの接続
+これによりコンテナの起動時にテーブルの作成や権限の付与などを行うことができる
+
+## 4.コンテナへの接続
 以下のコマンドでDockerコマンドに接続する
 ```
 docker container exec -it (コンテナ名) /bin/bash
@@ -56,3 +57,4 @@ docker container exec -it (コンテナ名) /bin/bash
 
 ## 5.参考URL
 - https://qiita.com/taqm/items/8b6b896ec4a9a0b84886
+- https://hub.docker.com/_/mysql/
