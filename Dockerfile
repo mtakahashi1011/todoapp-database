@@ -23,6 +23,8 @@ ENV MYSQL_ROOT_PASSWORD password
 
 COPY . .
 
+COPY ./docker-entrypoint-initdb.d/ /docker-entrypoint-initdb.d/
+
 COPY ./db/conf.d/my.cnf /etc/mysql/my.cnf
 
 # RUN /usr/bin/mysqld_safe & sleep 10s && cat setup.sql | mysql
