@@ -38,7 +38,7 @@ ENV MYSQL_PASSWORD password
 
 更に，以下のようにMySQLの設定ファイル`my.cnf'をコピーすることでデフォルトの認証方式を設定できる
 ```
-COPY
+COPY ./db/conf.d/my.cnf /etc/mysql/my.cnf
 ```
 
 ## 3.コンテナの起動
