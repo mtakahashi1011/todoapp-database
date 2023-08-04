@@ -1,10 +1,6 @@
 SET CHARACTER_SET_CLIENT = utf8;
 SET CHARACTER_SET_CONNECTION = utf8;
 
-CREATE USER `todoapp`@`%` IDENTIFIED BY `password`;
-
-GRANT ALL ON *.* TO `todoapp`@`%`;
-
 CREATE DATABASE `todo_app`;
 
 CREATE DATABASE `keiba`;
