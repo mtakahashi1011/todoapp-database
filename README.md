@@ -59,7 +59,7 @@ docker container exec -it (コンテナ名) /bin/bash
 - users
   
 |Field|Type|Null|Key|Extra|
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 |id|int unsigned|NO|PRI|auto_increment|
 |name|varchar(255)|YES|UNI||
 
