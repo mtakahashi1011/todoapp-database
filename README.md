@@ -62,6 +62,15 @@ docker container exec -it (コンテナ名) /bin/bash
 |---|---|---|---|---|
 |id|int unsigned|NO|PRI|auto_increment|
 |name|varchar(255)|YES|UNI||
+|password|varchar(255)|YES|||
+
+- tasks
+
+|Field|Type|Null|Key|Extra|
+|---|---|---|---|---|
+|id|int unsigned|NO|PRI|auto_increment|
+|user_id|int|NO|||
+|content|varchar(255)|NO|||
 
 ## 6.参考URL
 - https://qiita.com/taqm/items/8b6b896ec4a9a0b84886
