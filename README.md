@@ -57,6 +57,7 @@ docker container exec -it (コンテナ名) /bin/bash
 
 ## 5.データベースの設計
 - users
+  
 |Field|Type|Null|Key|Extra|
 |---|---|---|---|---|---|
 |id|int unsigned|NO|PRI|auto_increment|
