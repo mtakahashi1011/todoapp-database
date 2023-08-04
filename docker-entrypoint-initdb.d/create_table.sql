@@ -4,13 +4,13 @@ SET CHARACTER_SET_CONNECTION = utf8;
 CREATE DATABASE `todo_app`;
 
 CREATE TABLE `todo_app`.`users` (
-  id          INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-  name        VARCHAR(255) UNIQUE,
-  password    VARCHAR(255)
+  `id`          INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  `name`        VARCHAR(255) UNIQUE,
+  `password`    VARCHAR(255)
   );
 
 CREATE TABLE `todo_app`.`tasks` (
-  id          INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-  user_id     INT NOT NULL,
-  content     VARCHAR(255) NOT NULL
+  `id`          INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  `user_id`     INT NOT NULL,
+  `content`     VARCHAR(255) NOT NULL
 );
