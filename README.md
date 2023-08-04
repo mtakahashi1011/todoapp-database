@@ -55,6 +55,13 @@ docker container run --name (コンテナ名) -d -p 3306:3306 (イメージ名)
 docker container exec -it (コンテナ名) /bin/bash
 ```
 
-## 5.参考URL
+## 5.データベースの設計
+- users
+|Field|Type|Null|Key|Extra|
+|---|---|---|---|---|---|
+|id|int unsigned|NO|PRI|auto_increment|
+|name|varchar(255)|YES|UNI||
+
+## 6.参考URL
 - https://qiita.com/taqm/items/8b6b896ec4a9a0b84886
 - https://hub.docker.com/_/mysql/
