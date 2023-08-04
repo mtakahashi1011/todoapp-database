@@ -18,7 +18,7 @@ RUN apt install -y tzdata
 
 WORKDIR /workspace/test-mysql
 
-ENV MYSQL_DATABASE todo_app
+# ENV MYSQL_DATABASE todo_app
 ENV MYSQL_ROOT_PASSWORD password
 
 COPY . .
