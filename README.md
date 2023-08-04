@@ -36,6 +36,11 @@ ENV MYSQL_PASSWORD password
 |MYSQL_RANDOM_ROOT_PASSWORD|`"yes"`を設定することでランダムなパスワードが発行されます。<br>起動時の標準出力へ`GENERATED ROOT PASSWORD:  xxxxxxx`と出力されますが、正直ローカル開発用ならこのオプションを使うことはないと思います。|
 |MYSQL_ONETIME_PASSWORD|rootユーザのパスワード一度で期限切れにしてくれるらしいです。試してみたのですが、何故かうまく行かなかったので動作確認はできていません・・・ |
 
+更に，以下のようにMySQLの設定ファイル`my.cnf'をコピーすることでデフォルトの認証方式を設定できる
+```
+COPY
+```
+
 ## 3.コンテナの起動
 以下のコマンドでDockerコンテナを起動する
 ```
@@ -49,3 +54,5 @@ docker container run --name (コンテナ名) -d -p 3306:3306 (イメージ名)
 docker container exec -it (コンテナ名) /bin/bash
 ```
 
+## 5.参考URL
+- https://qiita.com/taqm/items/8b6b896ec4a9a0b84886
