@@ -1,4 +1,4 @@
-load data local infile 
+LOAD DATA LOCAL INFILE 
 "/docker-entrypoint-initdb.d/initial-data/data.csv"
-into table `tasks` fields terminated by ',' optionally enclosed by ""
-ignore 1 lines;
+INTO TABLE `tasks` FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+IGNORE 1 LINES;
