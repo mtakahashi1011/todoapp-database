@@ -5,7 +5,7 @@ SET CHARACTER_SET_CONNECTION = utf8;
 
 -- USE 'todo_app';
 
-CREATE TABLE 'todo_app'.'users' (
+CREATE TABLE IF NOT EXISTS 'todo_app'.'users' (
   'id'          INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
   'name'        VARCHAR(255) UNIQUE,
   'password'    VARCHAR(255)
