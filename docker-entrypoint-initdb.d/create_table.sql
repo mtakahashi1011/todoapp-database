@@ -15,4 +15,6 @@ CREATE TABLE `todo_app`.`tasks` (
   `content`     VARCHAR(255) NOT NULL
 );
 
+USE 'todo_app';
+
 INSERT INTO 'todo_app'.'tasks' (user_id, content) values (1, 'Node.js');
