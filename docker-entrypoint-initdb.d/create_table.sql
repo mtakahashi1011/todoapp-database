@@ -1,14 +1,12 @@
 SET CHARACTER_SET_CLIENT = utf8;
 SET CHARACTER_SET_CONNECTION = utf8;
 
-GRANT ALL ON *.* TO `todoapp`@`%`;
+CREATE DATABASE 'keiba';
 
-CREATE DATABASE `keiba`;
-
-CREATE TABLE `todo_app`.`users` (
-  `id`          INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-  `name`        VARCHAR(255) UNIQUE,
-  `password`    VARCHAR(255)
+CREATE TABLE 'todo_app'.'users' (
+  'id'          INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  'name'        VARCHAR(255) UNIQUE,
+  'password'    VARCHAR(255)
   );
 
 CREATE TABLE `todo_app`.`tasks` (
