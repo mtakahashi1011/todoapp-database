@@ -114,3 +114,4 @@ Dockerfileの記述の仕方について
 
 初回起動時の`.csv`ファイルのインポートについて
 - https://zenn.dev/thefirstpenguin/articles/117321e71a3625
+- https://rooter.jp/infra-ops/load-data-infile/
