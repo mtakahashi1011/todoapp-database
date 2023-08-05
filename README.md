@@ -72,9 +72,19 @@ docker container exec -it (コンテナ名) /bin/bash
 |user_id|int|NO||Null||
 |content|varchar(255)|NO||Null||
 
-## 6.参考URL
+## 6.sqlファイルの記述の仕方
+`.sql`ファイルの記述をする際にはクォーテーションの使い方に注意する
+
+MySQLではシングルとダブルは文字列定数，バックは識別引用符として扱われる
+
+識別子とはテーブル名やカラム名などデータベース中のオブジェクトを表す文字列である
+
+MySQLの予約語を識別子として使うための引用符が識別引用符である
+
+## 7.参考URL
 ToDoAppについて
 - https://zenn.dev/wkb/books/node-tutorial
+  
 Dockerfileの記述の仕方について
 - https://qiita.com/taqm/items/8b6b896ec4a9a0b84886
 - https://hub.docker.com/_/mysql/
