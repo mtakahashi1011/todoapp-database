@@ -81,6 +81,10 @@ MySQLではシングルとダブルは文字列定数，バックは識別引用
 
 MySQLの予約語を識別子として使うための引用符が識別引用符である
 
+そのため`password`などの文字列をテーブル名やカラム名に使う場合にはバッククォートを使う必要がある
+
+したがって，`.sql`ファイルを記述する際にはデータベース名，テーブル名とカラム名はバッククォートをその他の文字列にはシングルクォートを使うようにする
+
 ## 7.参考URL
 ToDoAppについて
 - https://zenn.dev/wkb/books/node-tutorial
@@ -88,3 +92,6 @@ ToDoAppについて
 Dockerfileの記述の仕方について
 - https://qiita.com/taqm/items/8b6b896ec4a9a0b84886
 - https://hub.docker.com/_/mysql/
+
+`.sql`ファイルの記述の仕方について
+- https://qiita.com/Ping/items/d5d8468dadd9c1287f5e
