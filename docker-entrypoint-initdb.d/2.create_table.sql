@@ -14,3 +14,5 @@ CREATE TABLE IF NOT EXISTS `todo_app`.`tasks` (
   `content`     VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`)
 );
+
+USE todo_app; 
