@@ -17,4 +17,4 @@ CREATE TABLE IF NOT EXISTS `todo_app`.`tasks` (
 
 USE todo_app; 
 
-INSERT INTO `tasks` VALUES (12, 2, `Node.js`);
+INSERT INTO `tasks` VALUES (12, 2, 'Node.js');
