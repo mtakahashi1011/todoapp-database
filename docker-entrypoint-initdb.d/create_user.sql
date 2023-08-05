@@ -1,1 +1,1 @@
-CREATE USER `test_user`@`%` IDENTIFIED BY `password`;
+CREATE USER 'test_user'@'%' IDENTIFIED BY 'password';
