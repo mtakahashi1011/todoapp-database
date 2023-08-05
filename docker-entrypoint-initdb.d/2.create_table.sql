@@ -1,7 +1,7 @@
 SET CHARACTER_SET_CLIENT = utf8;
 SET CHARACTER_SET_CONNECTION = utf8;
 
-CREATE DATABASE 'keiba';
+-- CREATE DATABASE 'keiba';
 
 USE 'todo_app';
 
