@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS 'todo_app'.'users' (
   'password'    VARCHAR(255)
   );
 
-CREATE TABLE 'todo_app'.'tasks' (
+CREATE TABLE IF NOT EXISTS 'todo_app'.'tasks' (
   'id'          INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
   'user_id'     INT NOT NULL,
   'content'     VARCHAR(255) NOT NULL
