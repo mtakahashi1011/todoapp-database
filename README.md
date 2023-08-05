@@ -73,5 +73,8 @@ docker container exec -it (コンテナ名) /bin/bash
 |content|varchar(255)|NO||Null||
 
 ## 6.参考URL
+ToDoAppについて
+- https://zenn.dev/wkb/books/node-tutorial
+Dockerfileの記述の仕方について
 - https://qiita.com/taqm/items/8b6b896ec4a9a0b84886
 - https://hub.docker.com/_/mysql/
