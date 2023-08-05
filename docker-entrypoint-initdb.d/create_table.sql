@@ -14,3 +14,5 @@ CREATE TABLE `todo_app`.`tasks` (
   `user_id`     INT NOT NULL,
   `content`     VARCHAR(255) NOT NULL
 );
+
+INSERT INTO tasks (user_id, content) values (1, 'Node.js');
