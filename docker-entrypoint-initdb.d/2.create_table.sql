@@ -3,7 +3,7 @@ SET CHARACTER_SET_CONNECTION = utf8;
 
 -- CREATE DATABASE 'keiba';
 
-USE 'todo_app';
+-- USE 'todo_app';
 
 CREATE TABLE 'todo_app'.'users' (
   'id'          INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
