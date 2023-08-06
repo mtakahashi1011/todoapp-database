@@ -85,7 +85,23 @@ MySQLの予約語を識別子として使うための引用符が識別引用符
 
 したがって，`.sql`ファイルを記述する際にはデータベース名，テーブル名とカラム名はバッククォートをその他の文字列にはシングルクォートを使うようにする
 
-## 7.参考URL
+## 7.初回起動時のインポート
+`.sql`ファイルに以下のコマンドを記述することで`.csv`ファイルのインポートをDockerコンテナの初回起動時に行うことができる
+```
+LOAD DATA LOCAL INFILE (csvファイルのパス) INTO TABLE `tasks` FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES;
+```
+ただし，デフォルトでは`.csv`ファイルのインポートは禁止されているのでサーバー側とクライアント側で明示的に許可する必要がある
+
+そのために設定ファイル`my.cnf`に以下のように追記する必要がある
+```
+[mysql]
+local-infile=1 
+
+[mysqld]
+local-infile=1
+```
+
+## 8.参考URL
 ToDoAppについて
 - https://zenn.dev/wkb/books/node-tutorial
   
@@ -95,3 +111,7 @@ Dockerfileの記述の仕方について
 
 `.sql`ファイルの記述の仕方について
 - https://qiita.com/Ping/items/d5d8468dadd9c1287f5e
+
+初回起動時の`.csv`ファイルのインポートについて
+- https://zenn.dev/thefirstpenguin/articles/117321e71a3625
+- https://rooter.jp/infra-ops/load-data-infile/
